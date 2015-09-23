@@ -1,0 +1,69 @@
+pre{
+	background-color: #f5f5f5;
+}
+.standard { margin:0px 20px 20px}
+.standard h1 {
+  font-size:20px;
+  margin:10px 0px;
+  font-weight:bold
+}
+.standard p {
+  line-height:150%;
+  margin:20px 0px 10px 0px;
+}
+input[type=radio] { vertical-align: middle; }
+.normalBtnArea a.largeBtn {
+  padding: 8px 15px;
+}
+#J_dialog_5_dest{
+  width: 30px; margin-left: 100px;
+  display: inline-block;
+}
+/*index.html  fany   end*/
+.header{width:100%; background:#0061BA;height:50px;line-height:50px; overflow: hidden; font-family: "\5fae\8f6f\96c5\9ed1";}
+.header a{display:block;font-size:18px;font-weight:800;text-indent:50px;color:#fff;,Arial,Tahoma;width: 220px;}
+.header a:hover{color: #fff;text-decoration: none;}
+li{font-size:12px; color:#999;line-height:24px;padding: 0px;margin: 0px; list-style: none;}
+ul{padding: 0px;margin: 6px 0px 2px 16px;}
+a{color: #666666; text-decoration: none;}
+a:hover{color:#0061BA; text-decoration: underline; }
+ul li strong{color:#0061BA; font-size: 14px; }
+.main_nemu{width:250px; height:500px; background: #fff;z-index: 9999;border-right:3px solid #0061BA; overflow-y:auto;}
+.content{width: 600px; height: 420px;float:right}
+.content iframe{overflow-x:hidden; }
+.i-collapse{color:#333;font-weight:700;cursor: pointer;}
+.zx-popup-tree .ui-dialog-content { overflow-y:auto; overflow-x:hidden; }
+/*index.html  fany   end*/
+
+/*tree_3.html  fany   start*/
+.form_container .zui {
+	float: left;
+	width: 300px;
+}
+#u11 {
+	position: absolute;
+	left: 330px;
+	top: 230px;
+	width: 49px;
+	height: 25px;
+	font-family: 'HiraginoSansGB-W3', 'Hiragino Sans GB W3',
+		'Hiragino Sans GB';
+	font-weight: 300;
+	font-style: normal;
+	font-size: 12px;
+}
+#u11_img {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 49px;
+	height: 25px;
+}
+#u12 {
+	position: absolute;
+	left: 0px;
+	top: 4px;
+	width: 49px;
+	white-space: nowrap;
+}
+/*tree_3.html  fany   end*/

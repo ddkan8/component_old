@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>10085前端组件库</title>
+<link rel="stylesheet" type="text/css" href="css/tablepay.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/common.css" media="all">
+<link rel="stylesheet" href="css/welcome.css">
+</head>
+<body id="main_body">
+<div class="form_container fn-clear">
+	<h1>前端组件会一直更新，请持续关注...</h1>
+	<p>如果您有新需求，请及时向前端组反馈，我们会及时为您提供前端组件</p>
+	<div class="recent">
+		<div class="title">近期新增</div>
+		<ul>
+			<li>2015/08/04 查询表格-宽度可变的列表 </li>
+			<li>2015/07/22 查询表格-复杂列表渲染 </li>
+		</ul>
+
+	</div>
+
+</div>
+</body>
+</html>

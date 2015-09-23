@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>对话框中的表单验证</title>
+<link href="../lib/pretty/prettify.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../css/tablepay.css" media="all">
+<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="../lib/dialog/6.0.4/css/ui-dialog.css">
+<link rel="stylesheet" type="text/css" href="../lib/ztree/3.5.01/zTreeStyle/zTreeStyle.css">
+<link rel="stylesheet" type="text/css" href="../css/business.css">
+<style>
+.zx-popup-tree .ui-dialog-content { overflow-y:auto; overflow-x:hidden; }
+</style>
+
+  <script src="../lib/jquery/1.8.1/jquery.js"></script>
+  <script type="text/javascript" src="../lib/pretty/prettify.js"></script>
+  <script src="../lib/datepicker/4.8.b2/WdatePicker.js"></script>
+  <script src="../lib/jquery/1.8.1/jquery.js"></script>
+  <script src="../lib/validate/1.13.1/jquery.validate.min.js"></script>
+  <script src="../lib/dialog/6.0.4/dialog-plus.js"></script>
+  <script src="../lib/ztree/3.5.01/jquery.ztree.core-3.5.min.js"></script>
+  <script src="../lib/ztree/3.5.01/jquery.ztree.excheck-3.5.min.js"></script>
+  <script src="../common/config.js"></script>
+  <script src="../common/common.js"></script>
+
+
+
+  <script type="text/javascript">
+    
+    var _dialog = null;
+    var _zTree = null;
+    
+    $(function(){
+      init();
+    });
+
+    var init = function(){
+      eventInit();
+    }
+
+    var eventInit = function(){
+      $('#btnOpen').on('click', showDialog);
+      $('#btnOpenTips').on('click', function(){
+        Util.dialog.tips('test info.', top);
+      })
+    }
+
+    srvMap.add('query', 'dialog/tree.json','../data/dialog/tree.json');//查询服务
+    var showDialog = function(){
+      Util.dialog.zTree({
+        //top:top, 
+        dataUrl:srvMap.get('query'), 
+        onSelect:function(obj){
+          $('.battleName').html(obj.name);
+          $('.battleValue').val(obj.value);
+        }, 
+      });
+    }
+
+
+  </script>
+</head>
+<body id="main_body" onload="prettyPrint()">
+  <div class="standard">
+    <H1>弹出树</H1>
+    <div>
+    	<div class="normalBtnArea current_1">
+        <span class="battleName"></span>
+        <input type="text" class="battleValue" />
+    		<a class="normalBtn BGblue largeBtn" href="javascript:;" id="btnOpen">选择一个战斗群</a>
+    	</div>
+    </div>
+    
+    <p><strong>html代码</strong></p>
+    <pre class="prettyprint mg_t_20 fn-clear" id="html">
+      &lt;div class="normalBtnArea current_1">
+        &lt;span class="battleName">&lt;/span>
+        &lt;input type="text" class="battleValue" />
+        &lt;a class="normalBtn BGblue largeBtn" href="javascript:;" id="btnOpen">选择一个战斗群&lt;/a>
+      &lt;/div>
+    </pre>    
+    
+    <p><strong>json代码</strong></p>
+      <pre class="prettyprint mg_t_20 fn-clear" id="html">
+        {
+          "returnCode": "0",
+          "returnMessage": "success",
+          "bean":{
+            "total": "4"
+          },
+          "beans":[
+              { "name":"海军", "open":true, /*name和value为必填项，name用于显示，value是隐藏值，open控制节点打开状态，children为子级节点，*/
+                "children": [
+                  { "name":"第七舰队",
+                    "children": [
+                      { "name":"乔治·华盛顿号航空母舰", "value":"CVN-73"},
+                      { "name":"蓝岭号两栖登陆指挥舰", "value":"LCC-19"},
+                      { "name":"安提耶坦号导弹巡洋舰", "value":"CG-54"},
+                    ]
+                  }
+                ]
+              }, 
+              { "name":"陆军", "open":true,
+                "children": [
+                ]
+              }, 
+              { "name":"空军", "open":true,
+                "children": [
+                  { "name":"第一航空军", "value":"1"},
+                  { "name":"第九航空军", "value":"9"},
+                  { "name":"第十二航空军", "value":"12"},
+                  { "name":"中央空军", "value":"c"},
+                  { "name":"空军作战中心", "value":"f"},
+
+                ]
+              }, 
+            ]
+
+        }
+
+
+
+      </pre>
+    
+
+    <p><strong>js代码</strong></p>
+    <pre class="prettyprint mg_t_20 fn-clear" id="html">
+      var _dialog = null;
+      var _zTree = null;
+      
+      $(function(){
+        init();
+      });
+
+      var init = function(){
+        eventInit();
+      }
+
+      var eventInit = function(){
+        $('#btnOpen').on('click', showDialog);
+      }
+
+      srvMap.add('query', 'dialog/tree.json','../data/dialog/tree.json');//查询服务
+      var showDialog = function(){
+        Util.dialog.zTree({
+          dataUrl:srvMap.get('query'), 
+          onSelect:function(obj){
+            $('.battleName').html(obj.name);
+            $('.battleValue').val(obj.value);
+          }, 
+        });
+      }
+    </pre>
+  </div>
+
+  <script type="text/template" id="dialogContent">
+    <ul id="treeDemo" class="ztree"></ul>
+  </script>
+
+  <a class="normalBtn BGblue largeBtn" href="javascript:;" id="btnOpenTips">弹窗</a>
+
+</body>
+</html>

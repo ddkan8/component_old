@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>对话框中的列表</title>
+<link href="../lib/pretty/prettify.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../css/tablepay.css" media="all">
+<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="../lib/dialog/6.0.4/css/ui-dialog.css">
+<link rel="stylesheet" type="text/css" href="../css/business.css">
+<script src="../lib/jquery/1.8.1/jquery.js"></script>
+<script type="text/javascript" src="../lib/pretty/prettify.js"></script>
+<script src="../lib/datepicker/4.8.b2/WdatePicker.js"></script>
+<script src="../lib/jquery/1.8.1/jquery.js"></script>
+<script src="../lib/blockUI/2.64/jquery.blockUI.js"></script>
+<script src="../lib/handlebars/1.3.0/handlebars.js"></script>
+<script src="../lib/pagination/1.2.1/jquery.pagination.js"></script>
+<script src="../lib/validate/1.13.1/jquery.validate.min.js"></script>
+<script src="../lib/dialog/6.0.4/dialog-plus.js"></script>
+<script src="../lib/jqueryPlugin/jquery.colResizable/1.5/m.js"></script>
+<script src="../common/config.js"></script>
+<script src="../common/common.js"></script>
+<script type="text/javascript">
+var _dialog = null;
+
+$(function(){
+  init();
+});
+
+var init = function(){
+  eventInit();
+}
+
+var eventInit = function(){
+  $('#btnOpen').on('click', showDialog);
+}
+
+var showDialog = function(){
+  var params = {
+    id : 'd1',    //弹出对话框的id
+    title : '提示信息', //左上角提示标题
+    content : $('#listFrame').html(), //具体提示内容
+    width : '600',  //对话框宽度
+    height : '400'  //对话框高度
+  }
+  _dialog = Util.dialog.openDiv(params);
+  dataLoad();
+}
+
+var dataLoad = function(){
+	srvMap.add('query' , '../componentData/dialog/pageList.json','componentData/pageList.json');
+	var G_params = {
+		url : srvMap.get('query'),
+		items_per_page : 10 ,   // 每页数     @param : limit
+		page_index : 0 , //当前页  @param : start
+		pagination : $('#pagination', _dialog.node), //分页id
+		tabletpl : $('#T_tabletpl'),  //表格模板容器
+		tablewrap :$('#J_tabletpl', _dialog.node), //表格容器
+		//pageCallback: pageback
+	};
+	Util.pagination(0, true , G_params , "");
+}
+
+
+</script>
+</head>
+<body>
+  <div class="ui-standard">
+    <H1>对话框中的列表</H1>
+    <div>
+
+	<div class="ui-normalBtnArea ui-current-1">
+		<a class="ui-normalBtn ui-BGblue ui-largeBtn" href="javascript:;" id="btnOpen">打开对话框</a>
+	</div>
+
+    </div>
+    
+    <p><strong>html代码</strong></p>
+    <pre class="prettyprint mt-20 fn-clear" id="html">
+    	&lt;script type="text/template" id="T_tabletpl">
+			{{#if beans}}
+		        {{#each beans}}
+		            &lt;tr>
+		                &lt;td>{{name}}&lt;/td>
+		                &lt;td>{{age}}&lt;/td>
+		            &lt;/tr>
+		         {{/each}}
+		    {{else}}
+			&lt;tr>
+				&lt;td colspan="2">
+					&lt;div class="ui-tips-box">
+						&lt;div class="ui-icon-noData">&lt;/div>
+						&lt;div class="ui-tips-text">暂无数据记录！&lt;/div>
+					&lt;/div>
+				&lt;/td>
+			&lt;/tr>
+		    {{/if}}
+		&lt;/script>
+
+		&lt;script type="text/template" id="listFrame">
+			&lt;table class="ui-record-table ui-table-radius ui-table-bordered ui-table-striped" >
+				&lt;thead>
+					&lt;tr>
+						&lt;th>名称&lt;/th>
+						&lt;th>年龄&lt;/th>
+					&lt;/tr>
+				&lt;/thead>
+				&lt;tbody id="J_tabletpl">&lt;/tbody>
+			&lt;/table>
+			&lt;DIV class="fn-clear ui-action-other-show ">
+				&lt;DIV id=pagination class="page pagination fn-right">&lt;/DIV>
+				&lt;DIV class="fn-right fn-pt5 fn-pr10">&lt;/DIV>
+			&lt;/DIV>
+		&lt;/script>
+    </pre>    
+    
+    <p><strong>js代码</strong></p>
+    <pre class="prettyprint mt-20 fn-clear" id="html">
+   	    var _dialog = null;
+
+		$(function(){
+		  init();
+		});
+
+		var init = function(){
+		  eventInit();
+		}
+
+		var eventInit = function(){
+		  $('#btnOpen').on('click', showDialog);
+		}
+
+		var showDialog = function(){
+		  var params = {
+		    id : 'd1',    //弹出对话框的id
+		    title : '提示信息', //左上角提示标题
+		    content : $('#listFrame').html(), //具体提示内容
+		    width : '600',  //对话框宽度
+		    height : '400'  //对话框高度
+		  }
+		  _dialog = Util.dialog.openDiv(params);
+		  dataLoad();
+		}
+
+		var dataLoad = function(){
+			srvMap.add('query' , '../componentData/dialog/pageList.json','componentData/pageList.json');
+			var G_params = {
+				url : srvMap.get('query'),
+				items_per_page : 10 ,   // 每页数     @param : limit
+				page_index : 0 , //当前页  @param : start
+				pagination : $('#pagination', _dialog.node), //分页id
+				tabletpl : $('#T_tabletpl'),  //表格模板容器
+				tablewrap :$('#J_tabletpl', _dialog.node), //表格容器
+				//pageCallback: pageback
+			};
+			Util.pagination(0, true , G_params , "");
+		}
+    </pre>
+  </div>
+
+	<script type="text/template" id="T_tabletpl">
+		{{#if beans}}
+	        {{#each beans}}
+	            <tr>
+	                <td>{{name}}</td>
+	                <td>{{age}}</td>
+	            </tr>
+	         {{/each}}
+	    {{else}}
+		<tr>
+			<td colspan="2">
+				<div class="ui-tips-box">
+					<div class="ui-icon-noData"></div>
+					<div class="ui-tips-text">暂无数据记录！</div>
+				</div>
+			</td>
+		</tr>
+	    {{/if}}
+	</script>
+
+	<script type="text/template" id="listFrame">
+		<table class="ui-record-table ui-table-radius ui-table-bordered ui-table-striped" >
+			<thead>
+				<tr>
+					<th>名称</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody id="J_tabletpl"></tbody>
+		</table>
+		<DIV class="fn-clear ui-action-other-show ">
+			<DIV id=pagination class="ui-pagination fn-right"></DIV>
+			<DIV class="fn-right fn-pt5 fn-pr10"></DIV>
+		</DIV>
+	</script>
+</body>
+</html>

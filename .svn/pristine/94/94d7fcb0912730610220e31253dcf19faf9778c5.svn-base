@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>中移在线前端组件库</title>
+<link rel="stylesheet" type="text/css" href="lib/dialog/6.0.4/css/ui-dialog.css">
+<link rel="stylesheet" type="text/css" href="lib/dialog/6.0.4/css/ui-dialog.css">
+<style>
+html,body{margin:0;padding:0;overflow: hidden;}
+.header{width:100%; background:#0061BA;height:50px;line-height:50px; overflow: hidden; font-family: "\5fae\8f6f\96c5\9ed1";}
+.header a{display:block;font-size:18px;font-weight:800;text-indent:50px;color:#fff;,Arial,Tahoma;width: 220px;}
+.header a:hover{color: #fff;text-decoration: none;}
+li{font-size:12px; color:#999;line-height:24px;padding: 0px;margin: 0px; list-style: none;}
+ul{padding: 0px;margin: 6px 0px 2px 16px;}
+a{color: #666666; text-decoration: none;}
+a:hover{color:#0061BA; text-decoration: underline; }
+ul li strong{color:#0061BA; font-size: 14px; }
+.main_nemu{width:250px; height:500px; background: #fff;z-index: 9999;border-right:3px solid #0061BA; overflow-y:auto;}
+.content{width: 600px; height: 420px;float:right}
+.content iframe{overflow-x:hidden; }
+.i-collapse{color:#333;font-weight:700;cursor: pointer;}
+</style>
+</head>
+<body>
+<div class="header"><a href="javascript:;" title="欢迎页">中移在线前端组件库</a></div>
+<div class="content">
+    <iframe id="iframeId" src="welcome.html" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+<div class="main_nemu">
+    <ul class="ui-first-items">
+        <li><strong>JS组件库</strong></li>
+        <li>
+            <ul>
+                <li class="i-collapse c-open">查询表格</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="Ajax/listRender.html" target="_self">简单列表渲染</a></li>
+                        <li><a href="Ajax/productManage.html" target="_self">查询列表页</a></li>
+                        <li><a href="Ajax/checkboxListSettingDefaultVal.html" target="_self">复选列表渲染</a></li>
+                        <li><a href="Ajax/colResizable.html" target="_self">列宽可变的列表</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="i-collapse c-open">表单及表单验证</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="validate/m.html" target="_self">表单及表单验证</a></li>
+                        <li><a href="form/serialize.html" target="_self">表单序列化为object对象</a></li>
+                        <li><a href="form/checkAll.html" target="_self">全选示例</a></li>
+                        <!--<li><a href="radioGroup/list_1.html" target="_self">单选按钮组</a></li>-->
+                        
+                    </ul>
+                </li>
+                <li class="i-collapse">下拉框控件</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="select/select_2.html" target="_self">一级下拉框</a></li>
+                        <li><a href="select/select_3.html" target="_self">级联下拉框</a></li>
+                        <li><a href="select/select_4.html" target="_self">下拉框显示"请选择"和"所有"</a></li>
+                        <li><a href="select/select_6.html" target="_self">下拉框设置默认值和回调函数</a></li>
+                        <li><a href="select/select_7.html" target="ifr">设置对应的input输入框值</a></li>
+                    </ul>
+                </li>
+                <li class="i-collapse">弹出框控件</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="dialog/10085_dialog.html" target="_self">弹出层Dialog</a></li>
+                        <li><a href="dialog/pageList.html" target="_self">弹出层中的列表</a></li>
+                        <li><a href="dialog/dialogFormValidate.html" target="_self">对话框中的表单验证</a></li>
+                        <li><a href="dialog/tree.html" target="_self">弹出树</a></li>
+
+                    </ul>
+                </li>
+                <li class="i-collapse">日期控件</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="date/dataPicker.html" target="_self">日期DatePicker</a></li>
+                        <!-- <li><a href="10085_date.html" target="_self">日期DatePicker深入</a></li> -->
+                    </ul>
+                </li>
+                <li class="i-collapse">上传控件</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="upload/file_upload.html" target="_self">文件上传</a></li>
+                        <li><a href="upload/img_upload.html" target="_self">图片上传</a></li>
+                    </ul>
+                </li>
+                <li class="i-collapse">树控件</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="tree/tree_1.html" target="_self">展示类树结构</a></li>
+                        <li><a href="tree/tree_2.html" target="_self">checkbox树结构</a></li>
+                        <li><a href="tree/tree_3.html" target="_self">可编辑树结构</a></li>
+                        <li><a href="tree/tree_5.html" target="ifr">异步加载树结构</a></li>
+                    </ul>
+                </li>
+                <li class="i-collapse">任务步骤指引</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="htmlPart/stepsFlow.html" target="_self">任务步骤指引</a></li>
+                    </ul>
+                </li>
+                <li class="i-collapse">单选组</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="radioGroup/list_1.html" target="_self">单选组</a></li>
+                    </ul>
+                </li>
+                <li class="i-collapse">证件类型验证</li>
+                <li style="display:none;">
+                    <ul>
+                        <li><a href="certiValid/certiValid.html" target="_self">证件类型验证</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>HTML代码片段</strong></li>
+        <li>
+            <ul>
+                <li><a href="htmlPart/10085_button.html">按钮(Button)</a></li>
+                <li><a href="htmlPart/10085_tabs.html" >标签页Tabs</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script src="lib/jquery/1.8.1/jquery.js"></script>
+
+  <script src="lib/jquery/1.8.1/jquery.js"></script>
+  <script type="text/javascript" src="lib/pretty/prettify.js"></script>
+  <script src="lib/datepicker/4.8.b2/WdatePicker.js"></script>
+  <script src="lib/jquery/1.8.1/jquery.js"></script>
+  <script src="lib/validate/1.13.1/jquery.validate.min.js"></script>
+  <script src="lib/dialog/6.0.4/dialog-plus.js"></script>
+  <script src="lib/ztree/3.5.01/jquery.ztree.core-3.5.min.js"></script>
+  <script src="lib/ztree/3.5.01/jquery.ztree.excheck-3.5.min.js"></script>
+<script src="js/collapse.js"></script>
+
+  <script src="common/config.js"></script>
+  <script src="common/common.js"></script>
+
+
+<script type="text/javascript">
+  $(function(){
+    function setObj(){
+      winWidth=$(window).width();
+      winHeight=$(window).height();
+      headerHeight=$(".header").height();
+      rightWidth=winWidth-$(".main_nemu").outerWidth(true);
+      $(".content").width(rightWidth);
+      $(".content").height(winHeight-headerHeight);
+      $(".main_nemu").height(winHeight-headerHeight);
+      $(".header").width(winWidth);
+    };
+
+    setObj();
+
+    $(window).resize(function(){
+      setObj();
+    });
+    
+
+    $('.i-collapse').Collapse();
+
+
+    $("ul > li > a").click(function(event){
+        event.preventDefault();
+        aObj=$(this);
+        link=aObj.attr("href");
+        $("#iframeId").attr("src",link);
+    });
+    $('.header a').bind('click',function(){
+        $("#iframeId").attr("src",'welcome.html');
+    })
+  });
+</script>
+</body>
+</html>
