@@ -55,6 +55,13 @@
             mp3: "dream.mp3",
           });
         },
+        timeupdate: function(event) { // 4Hz
+        // Restrict playback to first 60 seconds.
+          console.log(event.jPlayer.status.currentTime);
+          /*if (event.jPlayer.status.currentTime > 60) {
+            $(this).jPlayer('stop');
+          }*/
+        }, 
         swfPath: "../../lib/jqueryPlugin/jPlayer-2.9.1/dist/jplayer",
         supplied:"mp3",
         wmode: "window",
