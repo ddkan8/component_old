@@ -1200,12 +1200,12 @@
                     this.$player.jPlayer('play', $sentence.start/1000);
                     console.log($sentence.start);
                 }
-                
+                $('.textSpace li span').removeClass('text-red');
             }, 
             dialogueInit:function(){
                 _.each(this.textArr, $.proxy(function(item, i){
                     var key = item.start+'-'+item.end;
-                    var $item = $('<li>'+ (item && item.flag || 'nothing') +'</li>');
+                    var $item = $('<li>'+ (item && item.flag && item.flag==='1'?'客户':'客服' || '未定义') +' : </li>');
                     $item.words = {}
                     $item.index = i;
                     $item.start = item.start;
@@ -1239,11 +1239,13 @@
                     if (word){
                         var wordKey = word.start + '-' + word.end;
                         var $word = $sentence.words[wordKey];
+                        
                         $word.addClass('text-red');
                         var $previousWord = $word.prev();
                         if ($previousWord.length && $previousWord.attr('class') == null){
                             $previousWord.addClass('text-red');
                         }
+                        
 
                     }
                 }
