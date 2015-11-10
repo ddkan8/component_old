@@ -1,7 +1,7 @@
 var conf = 0; //控制服务    0：调用前端假数据   1：调用后台真是数据
 var srvMap = (function(){
     // var srcPref = ["../../data/","http://221.176.67.103:30000/ecp/"];
-    var srcPref = ["../data/","../../"];
+    var srcPref = ["../../data/","../../"];
     //项目公用服务路径写在dataArray内，业务服务请写在业务页面内部
     var dataArray = [
         {

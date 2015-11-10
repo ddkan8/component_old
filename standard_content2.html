@@ -13,7 +13,7 @@
             <h1>概述</h1>
             <p>为提高团队协作效率, 便于后台人员添加功能及前端后期优化维护, 输出高质量的文档, 特制订此文档. 本规范文档一经确认, 前端UI开发人员必须按本文档规范进行前台静态页面开发. 本文档如有不对或者不合适的地方请及时提出, 经讨论决定后可以更改此文档。 </p>
             <p>UI规范图片版，右键另存到本地查看：</p>
-            <img src="UI_design_standard.jpg" width="500" title="点击右键另存到本地查看" />
+            <img src="accessory/UI_design_standard.jpg" width="500" title="点击右键另存到本地查看" />
         </div>
         <h2><a id="_Ui425519469">颜色规范</a></h2>
         <div class="ui_color">
@@ -559,12 +559,1078 @@
         <h2><a id="_Ui425519487">日期控件</a></h2>
         <p></p>
         <h2><a id="_Ui425519488">table表格</a></h2>
+        <div class="ui_button dc_choic double">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td align="left" style="padding:0px;"><p>含有滚动条及操作功能按钮的双table表格(不含设置按钮)</p></td>
+                </tr>
+                <tr>
+                    <td style="padding:0px;">
+                        <img src="accessory/order.jpg" width="100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding:0px;"><p style="line-height:18px;">html:</p></td>
+                </tr>
+                <tr>
+                    <td style="padding-top:0px;">
+                        <pre class="prettyprint prettyprinted" style="line-height:150%;height:200px;overflow-y:scroll;margin:0px; width:700px;">
+&lt;div class=&quot;listTopBtn&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;p class=&quot;table_title&quot;&gt;订单设计&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea ft-right&quot; id=&quot;setWrap&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;添加备注&lt;/a&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;批量回滚&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tablewidth roll-wrap&quot; id=&quot;list1&quot; style=&quot;height:200px;&quot;&gt;  
+        &lt;table class=&quot;table-bordered position-title&quot; width=&quot;100%&quot; id=&quot;W_table&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot; /&gt;&lt;/div&gt;&lt;/th&gt;
+                    &lt;th width=&quot;180&quot;&gt;订单号&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付流水&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;支付方式&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单类型&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单来源渠道&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源渠道订单编号&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;收货人姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;收货人手机号码&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-省&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-市&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-区&lt;/th&gt;
+                    &lt;th width=&quot;200&quot;&gt;收货人地址&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单应付总金额&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单实收总金额&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;订购个数&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品码&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品类&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品牌&lt;/th&gt;
+                    &lt;th width=&quot;250&quot;&gt;商品名称&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品商家&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单支付时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单修改时间&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;来电手机号码&lt;/th&gt;
+                    &lt;th width=&quot;80&quot;&gt;来电客户姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;发票抬头&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;用户备注&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;下单工号&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        &lt;/table&gt;
+        &lt;table class=&quot;table-bordered&quot; width=&quot;100%&quot;&gt;
+            &lt;tbody id=&quot;J_tabletpl&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828143819608172750&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;180&quot;&gt;20150828143819608172750&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;自动取消&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;未支付&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td width=&quot;60&quot;&gt;在线支付&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td width=&quot;100&quot;&gt;10085电话营销&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;18538558201&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京市&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;东城区&lt;/td&gt;
+                    &lt;td width=&quot;200&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;1799.00&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;1&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td width=&quot;250&quot;&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;魅族科技&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;2015-08-28 14:38:19&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;15037108557&lt;/td&gt;
+                    &lt;td width=&quot;80&quot;&gt;未知&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;hwy001&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828142713248172749&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;20150828142713248172749&lt;/td&gt;
+                    &lt;td&gt;自动取消&lt;/td&gt;
+                    &lt;td&gt;未支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td&gt;支付宝支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td&gt;10085电话营销&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;云南&lt;/td&gt;
+                    &lt;td&gt;曲靖市&lt;/td&gt;
+                    &lt;td&gt;麒麟区&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;1799.00&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td&gt;魅族科技&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;未知&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;superadmin&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150827190529111172746&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;20150827190529111172746&lt;/td&gt;
+                    &lt;td&gt;下单失败&lt;/td&gt;
+                    &lt;td&gt;已支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td&gt;支付宝支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td&gt;10085电话营销&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;李洪阳&lt;/td&gt;
+                    &lt;td&gt;18838172242&lt;/td&gt;
+                    &lt;td&gt;河南&lt;/td&gt;
+                    &lt;td&gt;郑州市&lt;/td&gt;
+                    &lt;td&gt;金水区&lt;/td&gt;
+                    &lt;td&gt;富田丽景花园&lt;/td&gt;
+                    &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;1799.00&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td&gt;魅族科技&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;2015-08-27 19:05:29&lt;/td&gt;
+                    &lt;td&gt;2015-08-27 19:05:29&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td&gt;2015-08-27 19:25:17&lt;/td&gt;
+                    &lt;td&gt;18838172242&lt;/td&gt;
+                    &lt;td&gt;未知&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;superadmin&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!--翻页及功能按钮区域开始--&gt;
+    &lt;div class=&quot;amount-bottom&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;gridBottom&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGgray&quot; href=&quot;#&quot;&gt;导出&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td width=&quot;50%&quot;&gt;
+                &lt;div class=&quot;fn-clear action-other  action-other-show &quot;&gt;
+                    &lt;div id=&quot;Pagination&quot; class=&quot;page pagination fn-right&quot;&gt; &lt;/div&gt;
+                    &lt;div class=&quot;fn-right fn-pt5 fn-pr10&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;listTopBtn&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;p class=&quot;table_title&quot;&gt;订单设计&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea ft-right&quot; id=&quot;setWrap&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;添加备注&lt;/a&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;批量回滚&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tablewidth roll-wrap&quot; id=&quot;list1&quot; style=&quot;height:200px;&quot;&gt;  
+        &lt;table class=&quot;table-bordered position-title&quot; width=&quot;100%&quot; id=&quot;W_table&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot; /&gt;&lt;/div&gt;&lt;/th&gt;
+                    &lt;th width=&quot;180&quot;&gt;订单号&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付流水&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;支付方式&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单类型&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单来源渠道&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源渠道订单编号&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;收货人姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;收货人手机号码&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-省&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-市&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-区&lt;/th&gt;
+                    &lt;th width=&quot;200&quot;&gt;收货人地址&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单应付总金额&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单实收总金额&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;订购个数&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品码&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品类&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品牌&lt;/th&gt;
+                    &lt;th width=&quot;250&quot;&gt;商品名称&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品商家&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单支付时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单修改时间&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;来电手机号码&lt;/th&gt;
+                    &lt;th width=&quot;80&quot;&gt;来电客户姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;发票抬头&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;用户备注&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;下单工号&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        &lt;/table&gt;
+        &lt;table class=&quot;table-bordered&quot; width=&quot;100%&quot;&gt;
+            &lt;tbody id=&quot;J_tabletpl&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828143819608172750&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;180&quot;&gt;20150828143819608172750&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;自动取消&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;未支付&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td width=&quot;60&quot;&gt;在线支付&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td width=&quot;100&quot;&gt;10085电话营销&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;18538558201&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京市&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;东城区&lt;/td&gt;
+                    &lt;td width=&quot;200&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;1799.00&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;1&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td width=&quot;250&quot;&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;魅族科技&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;2015-08-28 14:38:19&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;15037108557&lt;/td&gt;
+                    &lt;td width=&quot;80&quot;&gt;未知&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;hwy001&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828142713248172749&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;20150828142713248172749&lt;/td&gt;
+                    &lt;td&gt;自动取消&lt;/td&gt;
+                    &lt;td&gt;未支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td&gt;支付宝支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td&gt;10085电话营销&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;云南&lt;/td&gt;
+                    &lt;td&gt;曲靖市&lt;/td&gt;
+                    &lt;td&gt;麒麟区&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;1799.00&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td&gt;魅族科技&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;未知&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;superadmin&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150827190529111172746&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;20150827190529111172746&lt;/td&gt;
+                    &lt;td&gt;下单失败&lt;/td&gt;
+                    &lt;td&gt;已支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td&gt;支付宝支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td&gt;10085电话营销&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;李洪阳&lt;/td&gt;
+                    &lt;td&gt;18838172242&lt;/td&gt;
+                    &lt;td&gt;河南&lt;/td&gt;
+                    &lt;td&gt;郑州市&lt;/td&gt;
+                    &lt;td&gt;金水区&lt;/td&gt;
+                    &lt;td&gt;富田丽景花园&lt;/td&gt;
+                    &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;1799.00&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td&gt;魅族科技&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;2015-08-27 19:05:29&lt;/td&gt;
+                    &lt;td&gt;2015-08-27 19:05:29&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td&gt;2015-08-27 19:25:17&lt;/td&gt;
+                    &lt;td&gt;18838172242&lt;/td&gt;
+                    &lt;td&gt;未知&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;superadmin&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td align="left" style="padding-bottom:0px;"><p>含有滚动条及操作功能按钮的单table表格(不包含设置按钮)</p></td>
+                </tr>
+                <tr>
+                    <td style="padding:0px;">
+                        <img src="accessory/onetable.jpg" width="100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding:0px;"><p style="line-height:18px;">html:</p></td>
+                </tr>
+                <tr>
+                    <td style="padding-top:0px;">
+                        <pre class="prettyprint prettyprinted" style="line-height:150%;height:200px;overflow-y:scroll; width:700px;">
+&lt;div class=&quot;listTopBtn&quot;&gt;
+&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;p class=&quot;table_title&quot;&gt;订单设计&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+        &lt;div class=&quot;normalBtnArea ft-right&quot; id=&quot;setWrap&quot;&gt;
+            &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;添加备注&lt;/a&gt;
+            &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;批量回滚&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;tablewidth roll-wrap&quot; id=&quot;list1&quot; style=&quot;height:200px;&quot;&gt;  
+&lt;table class=&quot;table-bordered position-title&quot; width=&quot;100%&quot; id=&quot;W_table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot; /&gt;&lt;/div&gt;&lt;/th&gt;
+            &lt;th width=&quot;180&quot;&gt;订单号&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;订单状态&lt;/th&gt;
+            &lt;th width=&quot;50&quot;&gt;支付状态&lt;/th&gt;
+            &lt;th width=&quot;50&quot;&gt;支付流水&lt;/th&gt;
+            &lt;th width=&quot;60&quot;&gt;支付方式&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;订单类型&lt;/th&gt;
+            &lt;th width=&quot;100&quot;&gt;订单来源渠道&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;源渠道订单编号&lt;/th&gt;
+            &lt;th width=&quot;60&quot;&gt;收货人姓名&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;收货人手机号码&lt;/th&gt;
+            &lt;th width=&quot;70&quot;&gt;收货人-省&lt;/th&gt;
+            &lt;th width=&quot;70&quot;&gt;收货人-市&lt;/th&gt;
+            &lt;th width=&quot;70&quot;&gt;收货人-区&lt;/th&gt;
+            &lt;th width=&quot;200&quot;&gt;收货人地址&lt;/th&gt;
+            &lt;th width=&quot;100&quot;&gt;订单应付总金额&lt;/th&gt;
+            &lt;th width=&quot;100&quot;&gt;订单实收总金额&lt;/th&gt;
+            &lt;th width=&quot;60&quot;&gt;订购个数&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;商品码&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;商品品类&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;商品品牌&lt;/th&gt;
+            &lt;th width=&quot;250&quot;&gt;商品名称&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;商品商家&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;源订单创建时间&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;订单创建时间&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;订单支付时间&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;订单修改时间&lt;/th&gt;
+            &lt;th width=&quot;100&quot;&gt;来电手机号码&lt;/th&gt;
+            &lt;th width=&quot;80&quot;&gt;来电客户姓名&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;发票抬头&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;用户备注&lt;/th&gt;
+            &lt;th width=&quot;120&quot;&gt;下单工号&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+&lt;/table&gt;
+&lt;table class=&quot;table-bordered&quot; width=&quot;100%&quot;&gt;
+    &lt;tbody id=&quot;J_tabletpl&quot;&gt;
+        &lt;tr&gt;
+            &lt;td width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828143819608172750&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+            &lt;td width=&quot;180&quot;&gt;20150828143819608172750&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;自动取消&lt;/td&gt;
+            &lt;td width=&quot;50&quot;&gt;未支付&lt;/td&gt;
+            &lt;td width=&quot;50&quot;&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+            &lt;td width=&quot;60&quot;&gt;在线支付&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+            &lt;td width=&quot;100&quot;&gt;10085电话营销&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+            &lt;td width=&quot;60&quot;&gt;test&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;18538558201&lt;/td&gt;
+            &lt;td width=&quot;70&quot;&gt;北京&lt;/td&gt;
+            &lt;td width=&quot;70&quot;&gt;北京市&lt;/td&gt;
+            &lt;td width=&quot;70&quot;&gt;东城区&lt;/td&gt;
+            &lt;td width=&quot;200&quot;&gt;test&lt;/td&gt;
+            &lt;td width=&quot;100&quot;&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+            &lt;td width=&quot;100&quot;&gt;1799.00&lt;/td&gt;
+            &lt;td width=&quot;60&quot;&gt;1&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+            &lt;td width=&quot;250&quot;&gt;魅族MX4（16G）-白色&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;魅族科技&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;2015-08-28 14:38:19&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+            &lt;td width=&quot;100&quot;&gt;15037108557&lt;/td&gt;
+            &lt;td width=&quot;80&quot;&gt;未知&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+            &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+            &lt;td width=&quot;120&quot;&gt;hwy001&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828142713248172749&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+            &lt;td&gt;20150828142713248172749&lt;/td&gt;
+            &lt;td&gt;自动取消&lt;/td&gt;
+            &lt;td&gt;未支付&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+            &lt;td&gt;支付宝支付&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+            &lt;td&gt;10085电话营销&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;test&lt;/td&gt;
+            &lt;td&gt;18539903469&lt;/td&gt;
+            &lt;td&gt;云南&lt;/td&gt;
+            &lt;td&gt;曲靖市&lt;/td&gt;
+            &lt;td&gt;麒麟区&lt;/td&gt;
+            &lt;td&gt;test&lt;/td&gt;
+            &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+            &lt;td&gt;1799.00&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+            &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+            &lt;td&gt;魅族科技&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+            &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+            &lt;td&gt;18539903469&lt;/td&gt;
+            &lt;td&gt;未知&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;superadmin&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150827190529111172746&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+            &lt;td&gt;20150827190529111172746&lt;/td&gt;
+            &lt;td&gt;下单失败&lt;/td&gt;
+            &lt;td&gt;已支付&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+            &lt;td&gt;支付宝支付&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+            &lt;td&gt;10085电话营销&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;李洪阳&lt;/td&gt;
+            &lt;td&gt;18838172242&lt;/td&gt;
+            &lt;td&gt;河南&lt;/td&gt;
+            &lt;td&gt;郑州市&lt;/td&gt;
+            &lt;td&gt;金水区&lt;/td&gt;
+            &lt;td&gt;富田丽景花园&lt;/td&gt;
+            &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+            &lt;td&gt;1799.00&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+            &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+            &lt;td&gt;魅族科技&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;2015-08-27 19:05:29&lt;/td&gt;
+            &lt;td&gt;2015-08-27 19:05:29&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+            &lt;td&gt;2015-08-27 19:25:17&lt;/td&gt;
+            &lt;td&gt;18838172242&lt;/td&gt;
+            &lt;td&gt;未知&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;superadmin&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;!--翻页及功能按钮区域开始--&gt;
+&lt;div class=&quot;amount-bottom&quot;&gt;
+&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;gridBottom&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+        &lt;div class=&quot;normalBtnArea&quot;&gt;
+            &lt;a class=&quot;smallBtn BGgray&quot; href=&quot;#&quot;&gt;导出&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td width=&quot;50%&quot;&gt;
+        &lt;div class=&quot;fn-clear action-other  action-other-show &quot;&gt;
+            &lt;div id=&quot;Pagination&quot; class=&quot;page pagination fn-right&quot;&gt; &lt;/div&gt;
+            &lt;div class=&quot;fn-right fn-pt5 fn-pr10&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+                        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding-bottom:0px;"><p>含有滚动条及操作功能按钮的双table表格(包含设置按钮)</p></td>
+                </tr>
+                <tr>
+                    <td style="padding:0px;">
+                        <img src="accessory/onetable.jpg" width="100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding:0px;"><p style="line-height:20px;">html:</p></td>
+                </tr>
+                <tr>
+                    <td style="padding-top:0px;">
+                        <pre class="prettyprint prettyprinted" style="line-height:150%;height:200px;overflow-y:scroll; width:700px;">
+    &lt;div class=&quot;listTopBtn&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;p class=&quot;table_title&quot;&gt;订单设计&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea ft-right&quot; id=&quot;setWrap&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;添加备注&lt;/a&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;批量回滚&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;set_div setbtn&quot;&gt;&lt;span class=&quot;arrowb&quot;&gt;设置&lt;/span&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tablewidth roll-wrap&quot; id=&quot;list1&quot; style=&quot;height:200px;&quot;&gt;  
+        &lt;table class=&quot;table-bordered position-title&quot; width=&quot;100%&quot; id=&quot;W_table&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot; /&gt;&lt;/div&gt;&lt;/th&gt;
+                    &lt;th width=&quot;180&quot;&gt;订单号&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付流水&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;支付方式&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单类型&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单来源渠道&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源渠道订单编号&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;收货人姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;收货人手机号码&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-省&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-市&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-区&lt;/th&gt;
+                    &lt;th width=&quot;200&quot;&gt;收货人地址&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单应付总金额&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单实收总金额&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;订购个数&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品码&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品类&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品牌&lt;/th&gt;
+                    &lt;th width=&quot;250&quot;&gt;商品名称&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品商家&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单支付时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单修改时间&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;来电手机号码&lt;/th&gt;
+                    &lt;th width=&quot;80&quot;&gt;来电客户姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;发票抬头&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;用户备注&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;下单工号&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        &lt;/table&gt;
+        &lt;table class=&quot;table-bordered&quot; width=&quot;100%&quot;&gt;
+            &lt;tbody id=&quot;J_tabletpl&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828143819608172750&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;180&quot;&gt;20150828143819608172750&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;自动取消&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;未支付&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td width=&quot;60&quot;&gt;在线支付&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td width=&quot;100&quot;&gt;10085电话营销&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;18538558201&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京市&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;东城区&lt;/td&gt;
+                    &lt;td width=&quot;200&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;1799.00&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;1&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td width=&quot;250&quot;&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;魅族科技&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;2015-08-28 14:38:19&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;15037108557&lt;/td&gt;
+                    &lt;td width=&quot;80&quot;&gt;未知&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;hwy001&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828142713248172749&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;20150828142713248172749&lt;/td&gt;
+                    &lt;td&gt;自动取消&lt;/td&gt;
+                    &lt;td&gt;未支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td&gt;支付宝支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td&gt;10085电话营销&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;云南&lt;/td&gt;
+                    &lt;td&gt;曲靖市&lt;/td&gt;
+                    &lt;td&gt;麒麟区&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;1799.00&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td&gt;魅族科技&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;未知&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;superadmin&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!--翻页及功能按钮区域开始--&gt;
+    &lt;div class=&quot;amount-bottom&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;gridBottom&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGgray&quot; href=&quot;#&quot;&gt;导出&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td width=&quot;50%&quot;&gt;
+                &lt;div class=&quot;fn-clear action-other  action-other-show &quot;&gt;
+                    &lt;div id=&quot;Pagination&quot; class=&quot;page pagination fn-right&quot;&gt; &lt;/div&gt;
+                    &lt;div class=&quot;fn-right fn-pt5 fn-pr10&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;  
+    &lt;div class=&quot;listTopBtn&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;p class=&quot;table_title&quot;&gt;订单设计&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea ft-right&quot; id=&quot;setWrap&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;添加备注&lt;/a&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;批量回滚&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tablewidth roll-wrap&quot; id=&quot;list1&quot; style=&quot;height:200px;&quot;&gt;  
+        &lt;table class=&quot;table-bordered position-title&quot; width=&quot;100%&quot; id=&quot;W_table&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot; /&gt;&lt;/div&gt;&lt;/th&gt;
+                    &lt;th width=&quot;180&quot;&gt;订单号&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付流水&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;支付方式&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单类型&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单来源渠道&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源渠道订单编号&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;收货人姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;收货人手机号码&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-省&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-市&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-区&lt;/th&gt;
+                    &lt;th width=&quot;200&quot;&gt;收货人地址&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单应付总金额&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单实收总金额&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;订购个数&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品码&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品类&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品牌&lt;/th&gt;
+                    &lt;th width=&quot;250&quot;&gt;商品名称&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品商家&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单支付时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单修改时间&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;来电手机号码&lt;/th&gt;
+                    &lt;th width=&quot;80&quot;&gt;来电客户姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;发票抬头&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;用户备注&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;下单工号&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        &lt;/table&gt;
+        &lt;table class=&quot;table-bordered&quot; width=&quot;100%&quot;&gt;
+            &lt;tbody id=&quot;J_tabletpl&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828143819608172750&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;180&quot;&gt;20150828143819608172750&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;自动取消&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;未支付&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td width=&quot;60&quot;&gt;在线支付&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td width=&quot;100&quot;&gt;10085电话营销&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;18538558201&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京市&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;东城区&lt;/td&gt;
+                    &lt;td width=&quot;200&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;1799.00&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;1&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td width=&quot;250&quot;&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;魅族科技&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;2015-08-28 14:38:19&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;15037108557&lt;/td&gt;
+                    &lt;td width=&quot;80&quot;&gt;未知&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;hwy001&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828142713248172749&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;20150828142713248172749&lt;/td&gt;
+                    &lt;td&gt;自动取消&lt;/td&gt;
+                    &lt;td&gt;未支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td&gt;支付宝支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td&gt;10085电话营销&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;云南&lt;/td&gt;
+                    &lt;td&gt;曲靖市&lt;/td&gt;
+                    &lt;td&gt;麒麟区&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;1799.00&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td&gt;魅族科技&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;未知&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;superadmin&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;                            
+                        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding-bottom:0px;"><p>含有滚动条及操作功能按钮的单table表格(包含设置按钮)</p></td>
+                </tr>
+                <tr>
+                    <td style="padding:0px;">
+                        <img src="accessory/onetable.jpg" width="100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding:0px;"><p style="line-height:20px;">html:</p></td>
+                </tr>
+                <tr>
+                    <td style="padding-top:0px;">
+                        <pre class="prettyprint prettyprinted" style="line-height:150%;height:200px;overflow-y:scroll; width:700px;">
+    &lt;div class=&quot;listTopBtn&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;p class=&quot;table_title&quot;&gt;订单设计&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea ft-right&quot; id=&quot;setWrap&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;添加备注&lt;/a&gt;
+                    &lt;a class=&quot;smallBtn BGblue&quot; href=&quot;#&quot;&gt;批量回滚&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;set_div setbtn&quot;&gt;&lt;span class=&quot;arrowb&quot;&gt;设置&lt;/span&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tablewidth roll-wrap&quot; id=&quot;list1&quot; style=&quot;height:200px;&quot;&gt;  
+        &lt;table class=&quot;table-bordered position-title&quot; width=&quot;100%&quot; id=&quot;W_table&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot; /&gt;&lt;/div&gt;&lt;/th&gt;
+                    &lt;th width=&quot;180&quot;&gt;订单号&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付状态&lt;/th&gt;
+                    &lt;th width=&quot;50&quot;&gt;支付流水&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;支付方式&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单类型&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单来源渠道&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源渠道订单编号&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;收货人姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;收货人手机号码&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-省&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-市&lt;/th&gt;
+                    &lt;th width=&quot;70&quot;&gt;收货人-区&lt;/th&gt;
+                    &lt;th width=&quot;200&quot;&gt;收货人地址&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单应付总金额&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;订单实收总金额&lt;/th&gt;
+                    &lt;th width=&quot;60&quot;&gt;订购个数&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品码&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品类&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品品牌&lt;/th&gt;
+                    &lt;th width=&quot;250&quot;&gt;商品名称&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;商品商家&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;源订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单创建时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单支付时间&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;订单修改时间&lt;/th&gt;
+                    &lt;th width=&quot;100&quot;&gt;来电手机号码&lt;/th&gt;
+                    &lt;th width=&quot;80&quot;&gt;来电客户姓名&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;发票抬头&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;用户备注&lt;/th&gt;
+                    &lt;th width=&quot;120&quot;&gt;下单工号&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+        &lt;/table&gt;
+        &lt;table class=&quot;table-bordered&quot; width=&quot;100%&quot;&gt;
+            &lt;tbody id=&quot;J_tabletpl&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td width=&quot;25&quot;&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828143819608172750&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;180&quot;&gt;20150828143819608172750&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;自动取消&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;未支付&lt;/td&gt;
+                    &lt;td width=&quot;50&quot;&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td width=&quot;60&quot;&gt;在线支付&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td width=&quot;100&quot;&gt;10085电话营销&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;18538558201&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;北京市&lt;/td&gt;
+                    &lt;td width=&quot;70&quot;&gt;东城区&lt;/td&gt;
+                    &lt;td width=&quot;200&quot;&gt;test&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;1799.00&lt;/td&gt;
+                    &lt;td width=&quot;60&quot;&gt;1&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td width=&quot;250&quot;&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;魅族科技&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;2015-08-28 14:38:19&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;100&quot;&gt;15037108557&lt;/td&gt;
+                    &lt;td width=&quot;80&quot;&gt;未知&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td width=&quot;120&quot;&gt;&lt;/td&gt;
+                    &lt;td width=&quot;120&quot;&gt;hwy001&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;div class=&quot;table_select&quot;&gt;&lt;input name=&quot;selectOrder&quot; type=&quot;checkbox&quot; value=&quot;20150828142713248172749&quot;&gt;&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;20150828142713248172749&lt;/td&gt;
+                    &lt;td&gt;自动取消&lt;/td&gt;
+                    &lt;td&gt;未支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--支付流水号 --&gt;
+                    &lt;td&gt;支付宝支付&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单类型 --&gt;
+                    &lt;td&gt;10085电话营销&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;云南&lt;/td&gt;
+                    &lt;td&gt;曲靖市&lt;/td&gt;
+                    &lt;td&gt;麒麟区&lt;/td&gt;
+                    &lt;td&gt;test&lt;/td&gt;
+                    &lt;td&gt;&lt;div class=&quot;gridNum&quot;&gt;1799.00&lt;/div&gt;&lt;/td&gt;
+                    &lt;td&gt;1799.00&lt;/td&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--85商品码 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品类 --&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--商品品牌 --&gt;
+                    &lt;td&gt;魅族MX4（16G）-白色&lt;/td&gt;
+                    &lt;td&gt;魅族科技&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!--订单支付时间 --&gt;
+                    &lt;td&gt;2015-08-28 14:27:13&lt;/td&gt;
+                    &lt;td&gt;18539903469&lt;/td&gt;
+                    &lt;td&gt;未知&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;&lt;!-- 发票抬头 --&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;superadmin&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!--翻页及功能按钮区域开始--&gt;
+    &lt;div class=&quot;amount-bottom&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;gridBottom&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+                &lt;div class=&quot;normalBtnArea&quot;&gt;
+                    &lt;a class=&quot;smallBtn BGgray&quot; href=&quot;#&quot;&gt;导出&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td width=&quot;50%&quot;&gt;
+                &lt;div class=&quot;fn-clear action-other  action-other-show &quot;&gt;
+                    &lt;div id=&quot;Pagination&quot; class=&quot;page pagination fn-right&quot;&gt; &lt;/div&gt;
+                    &lt;div class=&quot;fn-right fn-pt5 fn-pr10&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;        </pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="margin-bottom:0px;">
+                        <img src="detail.jpg" width="100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="padding:0px;"><p style="line-height:20px;">html:</p></td>
+                </tr>
+                <tr>
+                    <td style="padding-top:0px;">
+                        <pre class="prettyprint prettyprinted" style="line-height:150%;height:200px;overflow-y:scroll;margin-top:0px; width:700px;">
+&lt;table class=&quot;table-normal&quot;&gt;
+&lt;thead&gt;
+    &lt;th colspan=&quot;4&quot; class=&quot;td-title&quot;&gt;基本参数
+    &lt;/th&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+    &lt;td width=&quot;100&quot; class=&quot;td-label&quot;&gt;品牌:&lt;/td&gt;
+    &lt;td width=&quot;190&quot; class=&quot;td-content&quot; id=&quot;brand&quot;&gt; asdf&lt;/td&gt;
+    &lt;td width=&quot;120&quot; class=&quot;td-label&quot;&gt;型号:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;typel&quot;&gt; k552&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td class=&quot;td-label&quot;&gt;上市时间:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;stime&quot;&gt; 2013-10&lt;/td&gt;
+    &lt;td class=&quot;td-label&quot;&gt;输入方式:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;writeType&quot;&gt; 触控&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td class=&quot;td-label&quot;&gt;操作系统:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;sys&quot;&gt; asdf&lt;/td&gt;
+    &lt;td class=&quot;td-label&quot;&gt;系统版本:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;sysType&quot;&gt; asdf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td class=&quot;td-label&quot;&gt;CPU型号:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;cpuType&quot;&gt; asdf&lt;/td&gt;
+    &lt;td class=&quot;td-label&quot;&gt;CPU核数:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;cpuNum&quot;&gt; asdf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td class=&quot;td-label&quot;&gt;CPU频率:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;cpuHz&quot;&gt; asdf&lt;/td&gt;
+    &lt;td class=&quot;td-label&quot;&gt;运营商标志或内容:&lt;/td&gt;
+    &lt;td class=&quot;td-content&quot; id=&quot;ptyContent&quot;&gt; 酷派&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <p></p>
         <h2><a id="_Ui425519489">JavaScript</a>文件引用在页面中的位置 </h2>
         <p></p>
     <script src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/prettify.js"></script>
-    <script type="text/javascript">     
+    <script src="common/common.js"></script>  
+    <script type="text/javascript"> 
+        //页面加载完开始执行
+        $(document).ready(function () {
+            //初始化函数
+            var params1={
+                scrollwrap:$("#list1"),
+                title:$("#W_table")
+            }
+            Util.create.tablescroll(params1);
+            var params2={
+            scrollwrap:$("#list2"),
+            title:$("#W_table2")
+                }
+            Util.create.tablescroll(params2);
+        });   
     </script>
 </body>
 </html>

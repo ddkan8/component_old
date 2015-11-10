@@ -1274,64 +1274,66 @@ function compareDate(date1, date2){
     return true;
 }
 
+if (jQuery.validator) {
+	
+	jQuery.extend(jQuery.validator.messages, {
+	    required: "必选字段",
+		remote: "请修正该字段",
+		email: "请输入正确格式的电子邮件",
+		url: "请输入合法的网址",
+		date: "请输入合法的日期",
+		dateISO: "请输入合法的日期 (ISO).",
+		number: "请输入合法的数字",
+		digits: "只能输入整数",
+		creditcard: "请输入合法的信用卡号",
+		equalTo: "请再次输入相同的值",
+		accept: "请输入拥有合法后缀名的字符串",
+		maxlength: jQuery.validator.format("请输入一个 长度最多是 {0} 的字符串"),
+		minlength: jQuery.validator.format("请输入一个 长度最少是 {0} 的字符串"),
+		rangelength: jQuery.validator.format("请输入 一个长度介于 {0} 和 {1} 之间的字符串"),
+		range: jQuery.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
+		max: jQuery.validator.format("请输入一个最大为{0} 的值"),
+		min: jQuery.validator.format("请输入一个最小为{0} 的值")
+	});
+	$.validator.addMethod("isZipCode", function(value, element) {   
+	    var tel = /^[0-9]{6}$/;
+	    return this.optional(element) || (tel.test(value));
+	}, "请正确填写您的邮政编码");
+	$.validator.addMethod("zipCode", function(value, element) {   
+	    var tel = /^[1-9]\d{5}$/;
+	    return this.optional(element) || (tel.test(value));
+	}, "请正确填写您的邮政编码");
+	$.validator.addMethod("mobile", function(value, element) {
+		return this.optional( element ) || /^(86\+)?0?(13\d|15[012356789]|17[678]|18\d|14[57])\d{8}$/.test(value);
+	}, '手机号码各式不正确.');
 
-jQuery.extend(jQuery.validator.messages, {
-    required: "必选字段",
-	remote: "请修正该字段",
-	email: "请输入正确格式的电子邮件",
-	url: "请输入合法的网址",
-	date: "请输入合法的日期",
-	dateISO: "请输入合法的日期 (ISO).",
-	number: "请输入合法的数字",
-	digits: "只能输入整数",
-	creditcard: "请输入合法的信用卡号",
-	equalTo: "请再次输入相同的值",
-	accept: "请输入拥有合法后缀名的字符串",
-	maxlength: jQuery.validator.format("请输入一个 长度最多是 {0} 的字符串"),
-	minlength: jQuery.validator.format("请输入一个 长度最少是 {0} 的字符串"),
-	rangelength: jQuery.validator.format("请输入 一个长度介于 {0} 和 {1} 之间的字符串"),
-	range: jQuery.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
-	max: jQuery.validator.format("请输入一个最大为{0} 的值"),
-	min: jQuery.validator.format("请输入一个最小为{0} 的值")
-});
-$.validator.addMethod("isZipCode", function(value, element) {   
-    var tel = /^[0-9]{6}$/;
-    return this.optional(element) || (tel.test(value));
-}, "请正确填写您的邮政编码");
-$.validator.addMethod("zipCode", function(value, element) {   
-    var tel = /^[1-9]\d{5}$/;
-    return this.optional(element) || (tel.test(value));
-}, "请正确填写您的邮政编码");
-$.validator.addMethod("mobile", function(value, element) {
-	return this.optional( element ) || /^(86\+)?0?(13\d|15[012356789]|17[678]|18\d|14[57])\d{8}$/.test(value);
-}, '手机号码各式不正确.');
-
-$.validator.setDefaults({
-    errorLabelContainer: $("#J_errorwrap"),
-	showErrors: function(map, list) {
-		var focussed = document.activeElement;
-		if (focussed && $(focussed).is("input, textarea")) {
-			$(this.currentForm).tooltip("close", {
-				currentTarget: focussed
-			}, true)
-		}
-		this.currentElements.removeAttr("title").removeClass("ui-state-highlight");
-		$.each(list, function(index, error) {
-			$(error.element).attr("title", error.message).addClass("ui-state-highlight");
-		});
-		if (focussed && $(focussed).is("input, textarea")) {
-			$(this.currentForm).tooltip("open", {
-				target: focussed
+	$.validator.setDefaults({
+	    errorLabelContainer: $("#J_errorwrap"),
+		showErrors: function(map, list) {
+			var focussed = document.activeElement;
+			if (focussed && $(focussed).is("input, textarea")) {
+				$(this.currentForm).tooltip("close", {
+					currentTarget: focussed
+				}, true)
+			}
+			this.currentElements.removeAttr("title").removeClass("ui-state-highlight");
+			$.each(list, function(index, error) {
+				$(error.element).attr("title", error.message).addClass("ui-state-highlight");
 			});
+			if (focussed && $(focussed).is("input, textarea")) {
+				$(this.currentForm).tooltip("open", {
+					target: focussed
+				});
+			}
+			/*if(this.numberOfInvalids()>0){
+			    $("#J_error").show();
+			}else{
+			    $("#J_error").hide();
+			}
+			this.defaultShowErrors();*/
 		}
-		/*if(this.numberOfInvalids()>0){
-		    $("#J_error").show();
-		}else{
-		    $("#J_error").hide();
-		}
-		this.defaultShowErrors();*/
-	}
-});
+	});
+};
 
 $(function(){
 	//展开更多查询
