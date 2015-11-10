@@ -398,34 +398,34 @@ div.ui-tabsBtn a.ui-normalBtn {
 }
 a.ui-BGblue {
 	border:1px solid #4A81C4;
-	background:#3A8BE0 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#3A8BE0 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 }
 a.ui-BGblue:hover {
 	border:1px solid #4C90E5;
-	background:#4BA0F5 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#4BA0F5 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 	text-decoration:none
 }
 a.ui-BGblue:active {
 	border:1px solid #2F6AA6;
-	background:#2873C3 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#2873C3 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 }
 a.ui-BGgray {
 	border:1px solid #D7DCE1;
-	background:#F5F5F5 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#F5F5F5 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#989898;
 }
 a.ui-BGgray:hover {
 	border:1px solid #E0E0E0;
-	background:#fcfcfc url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#fcfcfc url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#989898;
 	text-decoration:none
 }
 a.ui-BGgray:active {
 	border:1px solid #E0E0E0;
-	background:#EBEBEB url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#EBEBEB url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#989898;
 }
 a.ui-disable:link {
@@ -473,7 +473,7 @@ a.ui-searchBtn {
 	line-height:100%;
 	border-radius:3px;
 	border:1px solid #4A81C4;
-	background:#3A8BE0 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#3A8BE0 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 }
 a.ui-searchBtn:linik {
@@ -484,11 +484,11 @@ a.ui-searchBtn:linik {
 	line-height:100%;
 	border-radius:3px;
 	border:1px solid #4A81C4;
-	background:#3A8BE0 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#3A8BE0 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 }
 a.ui-searchBtn:visited {
-	background:#3A8BE0 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#3A8BE0 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 }
 a.ui-searchBtn:hover {
@@ -499,7 +499,7 @@ a.ui-searchBtn:hover {
 	line-height:100%;
 	border-radius:3px;
 	border:1px solid #4A81C4;
-	background:#3A8BE0 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#3A8BE0 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 	text-decoration:none;
 }
@@ -511,7 +511,7 @@ a.ui-searchBtn:active {
 	line-height:100%;
 	border-radius:3px;
 	border:1px solid #4A81C4;
-	background:#3A8BE0 url(images/hn10085/topBtn-bg.png) top left repeat-x;
+	background:#3A8BE0 url(images/hn10085/topBtn_bg.png) top left repeat-x;
 	color:#fff;
 }
 a.ui-searchBtn i {

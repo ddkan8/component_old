@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>10085_buton</title>
+<link href="../../lib/pretty/prettify.css" rel="stylesheet" />
+<link rel="stylesheet" href="../../css/tablepay.css" media="all">
+<link rel="stylesheet" href="../../css/common.css" media="all">
+<link rel="stylesheet" href="../../css/business.css">
+</head>
+<body id="main_body" onload="prettyPrint()">
+<div class="ui-standard">
+
+  <H1>按钮使用规范</H1>
+  <p>按照北京设计公司的规范要求，按钮主要有以下几种：<br />
+    <strong>1、一般查询列表页面按钮</strong> </p>
+    
+  <div class="ui-normalBtnArea ft-right"><!--不附加ft-right样式，默认左对齐--> 
+    <a class="ui-normalBtn ui-BGblue" href="#">蓝色按钮</a> <a class="ui-normalBtn ui-BGgray" href="#">灰色按钮</a> <a class="ui-normalBtn ui-disable" href="#">不可用按钮</a> </div>
+  <pre class="prettyprint mt-20 fn-clear" id="html">
+&lt;div class=&quot;ui-normalBtnArea ft-right&quot;&gt;&lt;!--不附加ft-right样式，默认左对齐--&gt;
+    &lt;a class=&quot;ui-normalBtn ui-BGblue&quot; href=&quot;#&quot;&gt;蓝色按钮&lt;/a&gt;
+    &lt;a class=&quot;ui-normalBtn ui-BGgray&quot; href=&quot;#&quot;&gt;灰色按钮&lt;/a&gt;
+    &lt;a class=&quot;ui-normalBtn ui-disable&quot; href=&quot;#&quot;&gt;不可用按钮&lt;/a&gt;
+&lt;/div&gt;
+	</pre>
+    
+    
+  <p><strong>2、查询专用按钮</strong></p>
+  <div class="ui-normalBtnArea"> <a class="ui-searchBtn" href="javascript:;" id="J_search" ><i></i>查询按钮</a> </div>
+  <pre class="prettyprint mt-20 fn-clear" id="html">
+&lt;div class=&quot;ui-normalBtnArea&quot;&gt;
+    &lt;a class=&quot;ui-searchBtn&quot; href=&quot;javascript:;&quot; id=&quot;J_search&quot; &gt;&lt;i&gt;&lt;/i&gt;查询按钮&lt;/a&gt;
+&lt;/div&gt;
+	</pre>
+    
+    
+  <p> <strong>3、表单录入页面使用按钮</strong> </p>
+  <div class="ui-formBtnArea">
+    <table width="100%">
+      <tr>
+        <td><div class="ui-normalBtnArea"> <a class="ui-normalBtn ui-BGblue ui-largeBtn" href="javascript:;" id="J_search" >查询</a> <a class="ui-normalBtn ui-BGgray ui-largeBtn" href="javascript:;" id="J_search" >浏览</a> </div></td>
+        <td><div class="ui-normalBtnArea fn-right"> <a href="#" class="ui-formLink"><span>取消上传</span></a> </div></td>
+      </tr>
+    </table>
+  </div>
+  <pre class="prettyprint mt-20 fn-clear" id="html">
+&lt;div class=&quot;ui-formBtnArea&quot;&gt;
+  &lt;table width=&quot;100%&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;div class=&quot;ui-normalBtnArea&quot;&gt;
+            &lt;a class=&quot;ui-normalBtn ui-BGblue ui-largeBtn&quot; href=&quot;javascript:;&quot; id=&quot;J_search&quot; &gt;查询&lt;/a&gt;
+            &lt;a class=&quot;ui-normalBtn ui-BGgray ui-largeBtn&quot; href=&quot;javascript:;&quot; id=&quot;J_search&quot; &gt;浏览&lt;/a&gt;
+        &lt;/div&gt;
+	  &lt;/td&gt;
+      &lt;td&gt;
+          &lt;div class=&quot;ui-normalBtnArea fn-right&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;ui-formLink&quot;&gt;&lt;span&gt;取消上传&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+	</pre>
+    
+</div>
+
+<script src="../../lib/jquery/1.8.1/jquery.js"></script>
+<script src="../../lib/pretty/prettify.js"></script>
+<script src="../../lib/dialog/6.0.4/dialog-plus.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>单选组</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../../lib/pretty/prettify.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../css/tablepay.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../css/business.css">
+</head>
+<body id="main_body" onload="prettyPrint()" >
+<div class="ui-form-container">
+    <div class="ui-searchType fn-clear" data-type="coopNm">
+        <dl>
+            <dt>商家：</dt>
+            <dd>
+                <ul>
+					<li><a class="ui-click" href="javascript:;">全部</a></li>
+					<li><a class="" href="javascript:;">小米公司</a></li>
+					<li><a class="" href="javascript:;">天语公司</a></li>
+					<li><a class="" href="javascript:;">魅族科技</a></li>
+					<li><a class="" href="javascript:;">北京终端</a></li>
+					<li><a class="" href="javascript:;">酷派公司</a></li>
+					<li><a class="" href="javascript:;">广东终端</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="ui-searchType fn-clear" data-type="brand">
+        <dl>
+            <dt>品牌：</dt>
+            <dd>
+                <ul>
+					<li><a class="ui-click" href="javascript:;">全部</a></li>
+					<li><a class="" href="javascript:;">苹果</a></li>
+					<li><a class="" href="javascript:;">三星</a></li>
+					<li><a class="" href="javascript:;">华为</a></li>
+					<li><a class="" href="javascript:;">酷派</a></li>
+					<li><a class="" href="javascript:;">魅族</a></li>
+					<li><a class="" href="javascript:;">魅蓝</a></li>
+					<li><a class="" href="javascript:;">小米</a></li>
+					<li><a class="" href="javascript:;">红米</a></li>
+					<li><a class="" href="javascript:;">联想</a></li>
+					<li><a class="" href="javascript:;">TCL</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="ui-searchType fn-clear" data-type="priceRange">
+        <dl>
+            <dt>价格区间：</dt>
+            <dd>
+                <ul>
+					<li><a class="ui-click" href="javascript:;">全部</a></li>
+					<li><a class="" href="javascript:;">1000以下</a></li>
+					<li><a class="" href="javascript:;">1000-1999</a></li>
+					<li><a class="" href="javascript:;">2000-2999</a></li>
+					<li><a class="" href="javascript:;">3000-3999</a></li>
+					<li><a class="" href="javascript:;">4000-4999</a></li>
+					<li><a class="" href="javascript:;">5000以上</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="ui-searchType fn-clear" data-type="screenSize">
+        <dl>
+            <dt>屏幕：</dt>
+            <dd>
+                <ul>
+					<li><a class="ui-click" href="javascript:;">全部</a></li>
+					<li><a class="" href="javascript:;">4'以下</a></li>
+					<li><a class="" href="javascript:;">4'-4.9'</a></li>
+					<li><a class="" href="javascript:;">5'-5.9'</a></li>
+					<li><a class="" href="javascript:;">6'以上</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+
+
+	<pre class="prettyprint mt-20 fn-clear" id="html">
+		$(".ui-searchType a").bind('click',function() {
+            $(this).addClass("ui-click").parent().siblings('li').find("a.ui-click").removeClass("ui-click");
+		});
+	</pre>
+</div>
+
+
+<script src="../../lib/jquery/1.8.1/jquery.js"></script>
+<script type="text/javascript" src="../../lib/pretty/prettify.js"></script>
+<script src="../../lib/dialog/6.0.4/dialog-plus.js"></script>
+<script type="text/javascript">
+	$(function() {
+        $(".ui-searchType a").bind('click',function() {
+            $(this).addClass("ui-click").parent().siblings('li').find("a.ui-click").removeClass("ui-click");
+        });
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>select</title>
+<link rel="stylesheet" type="text/css" href="../../css/tablepay.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../css/common.css" media="all">
+<link href="../../lib/pretty/prettify.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../css/business.css">
+</head>
+<body id="main_body" onload="prettyPrint()" >
+
+<label class="fn-left" for="testId">省份：</label>
+<div class="" id="J_select"></div>
+<label for="J_input">省编码：</label>
+<input type="text" id="J_input" readonly />
+
+<pre class="prettyprint mg_t_20 fn-clear" id="html">
+&lt;label class=&quot;fn-left&quot; for=&quot;testId&quot;&gt;省份：&lt;/label&gt;
+&lt;div class=&quot;&quot; id=&quot;J_select&quot;&gt;&lt;/div&gt;
+&lt;label for=&quot;J_input&quot;&gt;省编码：&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;J_input&quot; readonly /&gt;
+
+
+$("#J_select").NiceSelect({
+	url:"../../../data/selectDatas.json",
+	datas:"codeType=test",
+	id:"testId",
+	name:"testId",
+	defaultValue:"50",
+	allJson:true, 		//为true，则会将每条json添加至对应的option节点上
+	handler:function(){
+		var txt = $(this).find('option:checked').attr('alljson');
+		txt = JSON.parse(txt);
+		$('#J_input').val(txt.value);
+	}
+});
+
+
+</pre>
+<script src="../../lib/jquery/1.8.1/jquery.js"></script>
+<script src="../../lib/pretty/prettify.js"></script>
+<script src="../../lib/datepicker/4.8.b2/WdatePicker.js"></script>
+<script src="../../lib/underscore/1.8.3/m.js"></script>
+<script src="../../lib/validate/1.13.1/jquery.validate.min.js"></script>
+<script src="../../lib/dialog/6.0.4/dialog-plus.js"></script>
+<script src="../../common/config.js"></script>
+<script src="../../common/common.js"></script>
+<script type="text/javascript" src="../../lib/pretty/prettify.js"></script>
+<script>
+$(function(){
+	$("#J_select").NiceSelect({
+		url:"../../data/selectDatas.json",
+		datas:"codeType=test",
+		id:"testId",
+		name:"testId",
+		defaultValue:"50",
+		allJson:true, 		//为true，则会将每条json添加至对应的option节点上
+		handler:function(){
+			var txt = $(this).find('option:checked').attr('alljson');
+			if (txt) {
+				txt = JSON.parse(txt);
+				$('#J_input').val(txt.value);	
+			}else{
+				$('#J_input').val('');	
+			}
+		}
+	});
+
+
+
+})
+</script>
+</body>
+</html>
