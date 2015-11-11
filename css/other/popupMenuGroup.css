@@ -1,0 +1,15 @@
+
+#popupMenuGroup, .popupMenuGroup-menu { list-style: none; }
+#popupMenuGroup li { display: inline-block; cursor: pointer; height: 30px;
+    margin: 0 10px;}
+.popupMenuGroup-menu { position: absolute; width:100px; height: 200px; border: 1px solid #ccc; background-color: #fff; margin: 0px;
+    padding: 0px;}
+.popupMenuGroup-menu li { cursor: pointer; 
+    margin: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.popupMenuGroup-menu li a { width: 90%;
+    display: inline-block;
+    height: 25px; text-decoration: none;}
