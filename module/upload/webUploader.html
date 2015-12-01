@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>multiple select</title>
+    <link rel="stylesheet" href="../../lib/pretty/prettify.css" />
+    <link rel="stylesheet" href="../../css/tablepay.css" media="all">
+    <link rel="stylesheet" href="../../css/common.css" media="all">
+    <!--<link rel="stylesheet" href="../../lib/webuploader-0.1.5/webuploader.css">-->
+    <style>
+        .btnSelectFile>div { width:200px; height: 200px;!important }
+        .btnSelectFile>.webuploader-pick {      }
+    </style>
+
+    <script src="../../lib/jquery/1.8.1/jquery.js"></script>
+    <script src="../../lib/webuploader-0.1.5/webuploader.min.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            new Uploader();            
+
+        });
+
+        var Uploader = function(){
+            this.initialize();
+        }
+        Uploader.prototype = {
+            initialize:function(){
+                var uploader = WebUploader.create({
+                    swf: '../../lib/webuploader-0.1.5/Uploader.swf',
+                    server: 'webUploader.php',
+                    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                    //pick: '#picker',
+                    pick:{
+                        id:$('.btnSelectFile'),
+                        innerHTML:'选择啦',
+                        multiple:false
+                    },
+                    auto:true, 
+                    resize: false
+                });
+                uploader.on('fileQueued', $.proxy(function(){
+                    console.log('fff');
+                    uploader.upload();
+                },this));
+                uploader.on('uploadSuccess', $.proxy(function(file, response){
+                    debugger;
+                    console.log('ok');
+                },this));
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="ui-standard">
+        <H1>文件上传</H1>
+        <!--<p><strong>示例</strong></p>-->
+        <div>
+            <form>
+                <span class="btnSelectFile">选择文件</span>
+            </form>
+        </div>
+
+        <p><strong>html代码</strong></p>
+        <pre class="prettyprint mt-20 fn-clear" id="html">
+            &lt;form>
+                &lt;span class="btnSelectFile">选择文件&lt;/span>
+            &lt;/form>
+        </pre>
+
+        <p><strong>js代码</strong></p>
+        <pre class="prettyprint mg_t_20 fn-clear" id="html">
+            var Uploader = function(){
+                this.initialize();
+            }
+            Uploader.prototype = {
+                initialize:function(){
+                    var uploader = WebUploader.create({
+                        swf: '../../lib/webuploader-0.1.5/Uploader.swf',
+                        server: 'webUploader.php',
+                        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                        //pick: '#picker',
+                        pick:{
+                            id:$('.btnSelectFile'),
+                            innerHTML:'选择啦',
+                            multiple:false
+                        },
+                        auto:true, 
+                        resize: false
+                    });
+                    uploader.on('fileQueued', $.proxy(function(){
+                        console.log('fff');
+                        uploader.upload();
+                    },this));
+                    uploader.on('uploadSuccess', $.proxy(function(file, response){
+                        debugger;
+                        console.log('ok');
+                    },this));
+                }
+            }
+        </pre>
+    </div>
+
+    <!--
+    <form action="webUploader.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+    -->
+
+</body>
+</html>
+

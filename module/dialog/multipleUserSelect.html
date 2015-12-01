@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>对话框中的表单验证</title>
+    <link rel="stylesheet" href="../../css/tablepay.css">
+
+    <style>
+        .zx-popup-tree .ui-dialog-content { overflow-y:auto; overflow-x:hidden; }
+    </style>
+
+    <script src="../../common/requirejsConfigObj.js"></script>
+    <script src="../../lib/requirejs/2.1.17.js"></script>
+    <script>
+        var _userSelect = null;
+        require(['multipleUserSelect', 'jquery'],function(UserSelect, $){
+            $(function(){
+                _userSelect = new UserSelect({
+                    el:'.userSelect'
+                });
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="ui-standard">
+        <H1>用户选择</H1>
+        <div class="userSelect">
+            
+        </div>
+
+        <p><strong>html代码</strong></p>
+        <pre class="prettyprint mt-20 fn-clear" id="html">
+        </pre>    
+
+    </div>
+
+</body>
+</html>
+
+
+<!--
+<span class="userNameStr"></span>
+<input type="text" class="userIDStr" />
+<a class="ui-normalBtn ui-BGblue ui-largeBtn btnOpen" href="javascript:;" id="btnOpen">选择</a>
+</div>
+-->
+
